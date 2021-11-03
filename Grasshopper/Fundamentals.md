@@ -255,9 +255,149 @@ if (2 === 4 || 1+1 ===2){
 	print("Both are false.");
 }
 ```
+# Loop
+A loop repeats same line of code over and over.
+The lines to repeat are surrounded by curly braces {}  
+There are many ways to execute a loop {"particularly in JavaScript"}
 
 ## for...of loop
-A loop repeats the section of code within the curly brackets {}. In JavaScript 
+- A loop repeats the section of code within the curly brackets {}. 
+- In JavaScript a for of loop goes through 	each element in array, string repeating the code for each element.
+```jsx
+var groceries = ['apple', 'bananas', 'yogurt'];
+for (var element of groceries) {
+	print(element);
+}
+```
+- Each item in the *groceries* array will be printed out on it's own line.
+
+```jsx
+for (var x of ['red', 'blue', 'green', 'yellow', 'violet', 'indigo']){
+	drawBox(x);
+	drawBox(x);
+	drawBox(x);
+	newLine();
+}
+```
+- 3 times red then new line 3 times second color then new line 3 times third color
+
+## Classic For loop
+In Java Script, classic for loop repeats code in { }  for a specific number of times. It is defined in three parts :
+- The first part happens before the loop starts and define looping variable (var i = 0;)
+- The second part is a test that determines if the loop should keep repeating (i < 10;)
+- The third part updates looping variable each time the loop repeats (i = i + 1;)
+
+```jsx
+print('The loop will go as long as i is less than 10');
+for(var i = 0; i < 10; i = i + 1) {
+	print(i);
+}
+```
+```jsx
+for (var i = 10; i > 0; i = i - 1;){
+	print(i);
+}
+print('Happy New Year');
+```
+
+## Nested loop
+A nested loop is a loop within another loop. Although nested loop can be useful, if you have too many it can make code execution slow or difficult to understand.
+
+```jsx
+for (var outerNumber of [1, 2, 3, 4, 5]){
+	for (var nestedNumber of [6, 7, 8, 9]){
+		print(outerNumber, nestedNumber);
+	}
+}
+```
+
+```jsx
+for (var band of [
+	'Raging'
+	'Happy'
+	'Hungry'
+]) {
+	for (var noun of [
+		'Pharmacy'
+		'Squids'
+		'Twins'
+	]) {
+		print('The' + '' + band + '' + noun);
+	}
+}
+```
+-  Raging goes to all noun
+- Happy goes to all noun
+- Hungry goes to all noun
+
+## Object { }
+An object stores multiple values that have properties or key names. 
+This allows them to be easily accessed later in the code.
+```jsx
+var groceris = {
+	apple: 5,
+	bannana: 2
+};
+```
+-  apple and bananas are properties of object groceries.
+-  5 and 2 are associated value with those properties.
+-  groceries.apple, for instance is equal to 5.
+
+## Accessed a Property
+An object can store multiple properties of information inside one variable. 
+Dot notation is used to access a property of an object. 
+**objectName.propertyName**
+
+```jsx
+var objectName = {
+	propertyName: 'Coding is fun',
+	otherPropertyName: 'This is also a key value'
+};
+print(objectName.propertyName);
+```
+**After curl brackets there is semi-colon is used"
+**Comma is also used after  property**
+- This will print out 'Coding is fun.'
+```jsx
+var name = {
+	first: 'ghost',
+	second: 'man',
+	last: '01'
+};
+print('Your name is:' + name.first + name.second + name.last);
+```
+
+```jsx
+print(rgbObject.blue);
+if (rgbObject.blue > 200){
+	drawBox(rgbObject);
+}
+```
+
+```jsx
+var teaCup = {red: 20, blue: 10, white: 5};
+var sugar = teaCup.blue
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
